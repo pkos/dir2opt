@@ -10,8 +10,8 @@ my $template = "";
 #check command line
 foreach my $argument (@ARGV) {
   if ($argument =~ /\Q$substringh\E/) {
-    print "dir2opt v0.5 - Generate RetroArch game options files for each game from the\n";
-	print "filenames in a directory scan. \n";
+    print "dir2opt v0.6 - Generate RetroArch game options files from an options template file\n";
+    print "               for each game in a directory scan. \n";
 	print "\n";
 	print "with dir2opt [directory ...] [template]\n";
     print "\n";
@@ -67,7 +67,7 @@ close (FILE);
 my $dirname = $directory;
 opendir(DIR, $dirname) or die "Could not open $dirname\n";
 while (my $filename = readdir(DIR)) {
-  if (-d $filename) {
+  if (-d $dirname . "/" . $filename) {
     next;
   } else {
     push(@linesf, $filename) unless $filename eq '.' or $filename eq '..';

@@ -1,5 +1,5 @@
-dir2opt v0.5 - Generate RetroArch game options files for each game from the
-filenames in a directory scan.
+dir2opt v0.6 - Generate RetroArch game options files from an options template file
+               for each game in a directory scan.
 
 with dir2opt [directory ...] [template]
 
